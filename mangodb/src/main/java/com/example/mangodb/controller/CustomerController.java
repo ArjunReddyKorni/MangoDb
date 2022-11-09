@@ -3,6 +3,7 @@ package com.example.mangodb.controller;
 import com.example.mangodb.domain.Customer;
 import com.example.mangodb.exception.CustomerNotFoundException;
 import com.example.mangodb.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ public class CustomerController {
 
     private CustomerService customerService;
 
+    @Autowired
     public CustomerController(CustomerService customerService) {
         this.customerService = customerService;
     }

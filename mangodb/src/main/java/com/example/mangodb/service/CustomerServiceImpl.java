@@ -3,6 +3,7 @@ package com.example.mangodb.service;
 import com.example.mangodb.domain.Customer;
 import com.example.mangodb.exception.CustomerNotFoundException;
 import com.example.mangodb.repository.CustomerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ public class CustomerServiceImpl implements CustomerService{
 
     public CustomerRepository customerRepository;
 
+    @Autowired
     public CustomerServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
